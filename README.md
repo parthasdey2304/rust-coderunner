@@ -1,5 +1,5 @@
-# Rust CodeRunner
 <img height="100px" width="100px" src="https://skillicons.dev/icons?i=rust" alt="rust icon">
+<h1>Rust CodeRunner</h1>
 I made this Script for myself to get my rust scripts compiled and executed in a single line on Linux
 
 # Pre-Requisites
