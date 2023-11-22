@@ -1,5 +1,6 @@
-# rust-coderunner
-This is a code runner for linux terminal to run rust codes.....
+# Rust CodeRunner
+<img height="100px" width="100px" src="https://skillicons.dev/icons?i=rust" alt="rust icon">
+I made this Script for myself to get my rust scripts compiled and executed in a single line on Linux
 
 # Pre-Requisites
 + `git` must be installed on your system!!
