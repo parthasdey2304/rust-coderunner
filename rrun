@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Check if a Rust file is provided as a parameter
+if [ -z "$1" ]; then
+    echo -e "\e[31mUsage: $0 <rust_file.rs>\e[0m"
+    exit 1
+fi
+
+# Get the filename and extension
+file="$1"
+filename=$(basename -- "$file")
+extension="${filename##*.}"
+
+# Check if the file has a .rs extension
+if [ "$extension" != "rs" ]; then
+    echo -e "\e[31mError: Please provide a Rust (.rs) file\e[0m"
+    exit 1
+fi
+
+# Compile the Rust program
+rustc "$file"
+
+# Check if compilation was successful
+if [ $? -eq 0 ]; then
+    echo -e "\e[32mCompilation successful. Running the program:\e[0m"
+    
+    # Run the compiled program
+    ./$(basename "$file" .rs)
+    
+    # Uncomment the following line if you want to display the content of the Rust file
+    # echo -e "\nContent of $file:"
+    # cat "$file"
+    
+    # Delete the compiled executable file
+    rm -f "$(basename "$file" .rs)"
+else
+    echo -e "\e[31mCompilation failed.\e[0m"
+fi
+
