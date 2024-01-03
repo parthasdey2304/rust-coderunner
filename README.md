@@ -42,7 +42,7 @@ chmod +x setup.sh
 ### The Rust CodeRunner is successfully installed on your system!
 
 # Usage
-+ Fist write the code with .rs extension, suppose `file_name.rs` :
++ First write the code with .rs extension, suppose `file_name.rs` :
 ``` rs
 // cat file_name.rs
 fn main() {
